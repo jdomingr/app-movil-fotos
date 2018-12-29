@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="img-src * data: filesystem: cdvfile:; default-src * data: gap: https://ssl.gstatic.com 'unsafe-eval';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; connect-src 'self' 'unsafe-inline' 'unsafe-eval' blob: ws: *;">
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="css/my-app.css">
+    <title>REMEMBER</title>
+</head>
+
+<body>
+    <div class="statusbar-overlay"></div>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">        
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content -->
+            <div class="page-content login-screen-content" style="background-color:white">
+                <div class="content-block-title"><img src="res/imagen4.png" width="60%"></div>
+ <div class="list-block">
+     
+    <ul>
+    <!-- Text inputs -->
+    <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">person</i></div>
+        <div class="item-inner">
+          <div class="item-title label">Nombre:</div>
+          <div class="item-input">
+            <input type="text"  name ="nombre" id="nombre" placeholder="Ingrese su Nombre" maxlength="15">
+          </div>
+        </div>
+      </div>
+    </li>
+      <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">persons</i></div>
+        <div class="item-inner">
+          <div class="item-title label">Apellido:</div>
+          <div class="item-input">
+            <input type="text" id="apellido" placeholder="Ingrese su Apellido" maxlength="20" required>
+          </div>
+        </div>
+      </div>
+    </li>
+      <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">email</i></div>
+        <div class="item-inner">
+          <div class="item-title label">E-mail:</div>
+          <div class="item-input">
+            <input type="email" id="email" placeholder="E-mail" required>
+          </div>
+        </div>
+      </div>
+    </li>
+      <li>
+      <div class="item-content">
+        <div class="item-media"><i class="icon f7-icons">lock</i></div>
+        <div class="item-inner">
+          <div class="item-title label"> Clave:</div>
+          <div class="item-input">
+            <input type="password" id="clave" placeholder="Ingrese una Clave" maxlength="10" required>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+     <br>
+     <br>
+     <br>
+      <div class="row">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                    <div class="col-10"></div>
+                    <div class="col-80"><a id="reg" class="button button-fill color-green" >Registrarse en REMEMBER</a></div>
+                    <div class="col-10"></div>
+      </div>
+     <br>
+     <div class="row">
+                    <!-- Each "cell" has col-[widht in percents] class -->
+                    <div class="col-10"></div>
+                    <div class="col-80"><a id="volver" class="button button-fill color-red">Volver</a></div>
+                    <div class="col-10"></div>
+      </div>
+         
+    
+  
+     
+</div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/registro.js"></script>
+   
+</body>
+
+</html>
